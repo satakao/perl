@@ -6,7 +6,7 @@ my %sum;
 open(FILE,'log.txt') or die "$!";
 #ファイルから1行読み込んで行があれば$lineに格納する
 while (my $line = <FILE>){
-  #空白で区切れない行(今回だと日付)はそもそも変数にも
+  #空白で区切れない行(今回だと日付)はそもそも変数にも入らない
   my ($work, $time) = split(/ /,$line);
   #definedで$time内に値が入っていれば処理を行う
   if (defined($time)){
